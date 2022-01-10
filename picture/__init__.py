@@ -16,7 +16,7 @@ from picture.detector import detect
 from picture.hasher import imagehash
 from picture.hasher import imageload
 
-__version__ = '0.0.0'
+__version__ = '0.1.0'
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 PROCESS = 'picture'
