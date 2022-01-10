@@ -43,7 +43,7 @@ class Lookup:
             return
         loaded = utila.file_read(path)
         for line in loaded.splitlines():
-            typ, hashed, content = line.split(',', maxsplit=2)
+            typ, hashed, content, _ = line.split(',', maxsplit=3)
             typ = convert(typ)
             hashed = int(hashed)
             content = content.replace('[[NL]]', '\n')
