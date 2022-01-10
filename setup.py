@@ -33,6 +33,7 @@ if __name__ == "__main__":
         description='get the content',
         install_requires=REQUIRES,
         long_description=README,
+        include_package_data=True,
         name='picture',
         platforms='any',
         url='https://dev.package.checkitweg.de/picture',
@@ -44,5 +45,6 @@ if __name__ == "__main__":
         ],
         packages=[
             'picture',
+            'picture_train',
         ],
     )
