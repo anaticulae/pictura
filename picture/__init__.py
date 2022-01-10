@@ -9,6 +9,10 @@
 
 import os
 
+from picture.data import ImageContent
+from picture.data import ImageType
+from picture.detector import detect
+
 __version__ = '0.0.0'
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
