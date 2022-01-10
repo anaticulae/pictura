@@ -12,6 +12,7 @@ import os
 from picture.data import ImageContent
 from picture.data import ImageType
 from picture.detector import detect
+from picture.hasher import imagehash
 
 __version__ = '0.0.0'
 
