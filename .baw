@@ -3,7 +3,7 @@ short = picture
 name = get the content
 
 source = picture
-    picture_train
+    picture_trained
 
 [release]
 fail_on_finding = True

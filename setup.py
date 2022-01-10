@@ -45,6 +45,6 @@ if __name__ == "__main__":
         ],
         packages=[
             'picture',
-            'picture_train',
+            'picture_trained',
         ],
     )

@@ -7,4 +7,4 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-include picture_train/simple
+include picture_trained/simple
