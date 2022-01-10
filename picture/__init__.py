@@ -13,6 +13,7 @@ from picture.data import LOGO_TEXT
 from picture.data import ImageContent
 from picture.data import ImageType
 from picture.detector import detect
+from picture.detector import text_frompath
 from picture.hasher import imagehash
 from picture.hasher import imageload
 

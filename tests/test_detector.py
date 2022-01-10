@@ -28,3 +28,21 @@ def test_image_content():
     # TODO: ENABLE LATER
     expected = 'IN DEI NOMINE FELICITER\nRADBOUD UNIVERSITEIT NIJMEGEN'
     assert detected.text == expected
+
+
+EXPECTED = """\
+DHBW
+DUALE HOCHSCHULE
+BADEN WUERTEMBERG
+""".strip()
+
+
+def test_text_frompath():
+    sources = os.path.join(
+        power.link(power.HOME040_PDF),
+        'rawmaker__images_images',
+    )
+    images = utila.file_list(sources, exclude='yaml', absolute=True)
+    first = images[0]
+    text = picture.text_frompath(first)
+    assert text == EXPECTED

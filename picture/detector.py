@@ -18,6 +18,15 @@ def detect(image: PIL.Image.Image) -> picture.ImageContent:
     detected = picture_trained.LOOKUP(hashed)
     if not detected:
         return None
-    text = detected[1]
-    result = picture.ImageContent(detected=detected[0], text=text)
+    textraw = detected[1]
+    result = picture.ImageContent(detected=detected[0], text=textraw)
     return result
+
+
+def text_frompath(path: str) -> str:
+    image = picture.imageload(path)
+    detected = detect(image)
+    if not detected:
+        return None
+    text = detected.text
+    return text
