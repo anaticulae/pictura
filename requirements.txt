@@ -6,3 +6,7 @@
 # use or distribution is an offensive act against international law and may
 # be prosecuted under federal law. Its content is company confidential.
 #==============================================================================
+
+utila>=2.63.0<3.0.0
+
+Pillow==8.2.0
