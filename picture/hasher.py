@@ -15,10 +15,21 @@ def imagehash(image: PIL.Image.Image) -> int:
     """\
     >>> assert imagehash(PIL.Image.new('1', (512, 512), color=0))
     """
+    image = image_normalize(image)
     png = image._repr_png_()  # pylint:disable=W0212
     result = utila.binhash(png)
     return result
 
 
 def imageload(path: str) -> PIL.Image.Image:
-    return PIL.Image.open(path)
+    with PIL.Image.open(path) as image:
+        result = image_normalize(image)
+    return result
+
+
+IMAGE_SIZE = (512, 512)
+
+
+def image_normalize(image: PIL.Image.Image) -> PIL.Image.Image:
+    resized = image.resize(IMAGE_SIZE)
+    return resized
