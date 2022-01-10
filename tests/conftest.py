@@ -7,4 +7,35 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import genex
+import pytest
+
+import picture
+import power
+
 pytest_plugins = ['pytester', 'xdist']  # pylint: disable=invalid-name
+
+PACKAGE = picture.PROCESS
+
+power.setup(picture.ROOT)
+
+RESOURCES = [
+    (power.MASTER063_PDF, '0'),
+]
+
+
+@pytest.mark.usefixtures('session')
+def pytest_sessionstart():
+    power.run()
+
+
+def extract(resources):
+    genex.extract(
+        files=resources,
+        destination=power.generated(),
+        rawmaker='--images',
+        oneline=None,
+        pdfinfo=False,
+        pages=':',
+        base=power.REPOSITORY,
+    )
