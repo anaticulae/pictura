@@ -11,12 +11,15 @@ import dataclasses
 import enum
 
 
-class ImageType(enum.Enum):
+class ImageType(enum.Flag):
     IMAGE = enum.auto()
     TEXT = enum.auto()
     LOGO = enum.auto()
     EMPTY = enum.auto()
     UNDEFINED = enum.auto()
+
+
+LOGO_TEXT = ImageType.LOGO | ImageType.TEXT
 
 
 @dataclasses.dataclass

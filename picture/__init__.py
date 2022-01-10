@@ -9,6 +9,7 @@
 
 import os
 
+from picture.data import LOGO_TEXT
 from picture.data import ImageContent
 from picture.data import ImageType
 from picture.detector import detect
