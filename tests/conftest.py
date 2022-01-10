@@ -20,7 +20,8 @@ PACKAGE = picture.PROCESS
 power.setup(picture.ROOT)
 
 RESOURCES = [
-    (power.MASTER063_PDF, '0'),
+    power.MASTER063_PDF,
+    power.HOME040_PDF,
 ]
 
 
@@ -36,6 +37,6 @@ def extract(resources):
         rawmaker='--images',
         oneline=None,
         pdfinfo=False,
-        pages=':',
+        pages='0',
         base=power.REPOSITORY,
     )
