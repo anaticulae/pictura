@@ -18,3 +18,7 @@ def imagehash(image: PIL.Image.Image) -> int:
     png = image._repr_png_()  # pylint:disable=W0212
     result = utila.binhash(png)
     return result
+
+
+def imageload(path: str) -> PIL.Image.Image:
+    return PIL.Image.open(path)
