@@ -10,8 +10,14 @@
 import PIL.Image
 
 import picture
+import picture_train
 
 
 def detect(image: PIL.Image.Image) -> picture.ImageContent:
-    result = picture.ImageContent()
+    hashed = picture.imagehash(image)
+    detected = picture_train.LOOKUP(hashed)
+    if not detected:
+        return None
+    text = detected[1]
+    result = picture.ImageContent(detected=detected[0], text=text)
     return result

@@ -9,14 +9,12 @@
 
 import os
 
-import pytest
 import utila
 
 import picture
 import power
 
 
-@pytest.mark.xfail(reason='incomplete impl')
 def test_image_content():
     sources = os.path.join(
         power.link(power.MASTER063_PDF),
@@ -26,7 +24,7 @@ def test_image_content():
     first = images[0]
     loaded = picture.imageload(first)
     detected = picture.detect(loaded)
-    assert detected.detected == picture.ImageType.LOGO
+    assert detected.detected == picture.LOGO_TEXT
     # TODO: ENABLE LATER
     expected = 'IN DEI NOMINE FELICITER\nRADBOUD UNIVERSITEIT NIJMEGEN'
     assert detected.text == expected
