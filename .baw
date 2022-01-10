@@ -1,0 +1,6 @@
+[project]
+short = picture
+name = get the content
+
+[release]
+fail_on_finding = True
