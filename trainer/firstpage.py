@@ -1,0 +1,49 @@
+# =============================================================================
+# C O P Y R I G H T
+# -----------------------------------------------------------------------------
+# Copyright (c) 2022 by Helmut Konrad Fahrendholz. All rights reserved.
+# This file is property of Helmut Konrad Fahrendholz. Any unauthorized copy,
+# use or distribution is an offensive act against international law and may
+# be prosecuted under federal law. Its content is company confidential.
+# =============================================================================
+"""Collect first pages, extract logo and determine content by hand."""
+
+import os
+
+import picture
+import power
+import utila
+
+ROOT = utila.tmpdir(picture.ROOT)
+
+
+def extractpdf(pdf):
+    filename = utila.simple(os.path.split(pdf)[1])
+    path = os.path.join(ROOT, filename)
+    os.makedirs(path)
+    cmd = f'rawmaker -i {pdf} -o {path} --images --pages=0,1,2'
+    utila.debug(cmd)
+    utila.run(cmd)
+    return path
+
+
+def imageinfo(path: str):
+    document = os.path.split(path)[1]
+    sources = os.path.join(path, 'rawmaker__images_images')
+    if not os.path.exists(sources):
+        utila.debug(f'path does not exists: {sources}')
+        return
+    images = utila.file_list(sources, exclude='yaml', absolute=True)
+    for image in images:
+        loaded = picture.imageload(image)
+        hashed = picture.imagehash(loaded)
+        utila.log(',', end='')
+        utila.log(hashed, end=',')
+        utila.log('', end=',')
+        utila.log(document, end=' ')
+        utila.log(image)
+
+
+for filepath in power.PDF:
+    extacted = extractpdf(filepath)
+    imageinfo(extacted)
