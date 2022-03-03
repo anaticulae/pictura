@@ -45,6 +45,7 @@ def imageinfo(path: str):
         utila.log(image)
 
 
-for filepath in power.PDF:
-    extacted = extractpdf(filepath)
-    imageinfo(extacted)
+if __name__ == "__main__":
+    for filepath in power.PDF:
+        extacted = extractpdf(filepath)
+        imageinfo(extacted)
