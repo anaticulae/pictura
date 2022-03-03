@@ -9,10 +9,10 @@
 
 import os
 
+import power
 import utila
 
 import picture
-import power
 
 
 def test_image_content():

@@ -8,10 +8,10 @@
 # =============================================================================
 
 import genex
+import power
 import pytest
 
 import picture
-import power
 
 pytest_plugins = ['pytester', 'xdist']  # pylint: disable=invalid-name
 

@@ -10,9 +10,10 @@
 
 import os
 
-import picture
 import power
 import utila
+
+import picture
 
 ROOT = utila.tmpdir(picture.ROOT)
 
