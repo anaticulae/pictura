@@ -11,10 +11,12 @@ import os
 
 import power
 import utila
+import utilatest
 
 import picture
 
 
+@utilatest.requires(power.MASTER063_PDF)
 def test_image_content():
     sources = os.path.join(
         power.link(power.MASTER063_PDF),
@@ -37,6 +39,7 @@ BADEN WUERTEMBERG
 """.strip()
 
 
+@utilatest.requires(power.HOME040_PDF)
 def test_text_frompath():
     sources = os.path.join(
         power.link(power.HOME040_PDF),
