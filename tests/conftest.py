@@ -33,10 +33,9 @@ def pytest_sessionstart():
 def extract(resources):
     genex.extract(
         files=resources,
-        destination=power.generated(),
+        dest=power.generated(),
         rawmaker='--images',
         oneline=None,
         pdfinfo=False,
         pages='0',
-        base=power.REPOSITORY,
     )
