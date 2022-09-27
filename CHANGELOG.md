@@ -2,6 +2,24 @@
 
 Every noteable change is logged here.
 
+## v0.2.0 (2022-09-27)
+
+### Feature
+
+* add method to detect text from path (52ed1d41b809)
+
+### Fix
+
+* do not run on import time (8ebb40b42393)
+
+### Chore
+
+* add Jenkinsfile (a6b390fbe825)
+* upgrade requirements.txt (5081de19864b)
+* add utilatest (84deea006e61)
+* upgrade requirements.txt (70f0097193f6)
+* extend test data generator (1ae0e899d9e5)
+
 ## v0.1.0
 
 ### Feature
