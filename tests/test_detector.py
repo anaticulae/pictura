@@ -10,12 +10,14 @@
 import os
 
 import power
+import pytest
 import utila
 import utilatest
 
 import picture
 
 
+@pytest.mark.xfail(reason='software integration')
 @utilatest.requires(power.MASTER063_PDF)
 def test_image_content():
     sources = os.path.join(
@@ -39,6 +41,7 @@ BADEN WUERTEMBERG
 """.strip()
 
 
+@pytest.mark.xfail(reason='software integration')
 @utilatest.requires(power.HOME040_PDF)
 def test_text_frompath():
     sources = os.path.join(
