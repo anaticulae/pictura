@@ -2,6 +2,18 @@
 
 Every noteable change is logged here.
 
+## v0.2.1 (2022-10-10)
+
+### Chore
+
+* add separate generate step (d59882b1350e)
+* upgrade baw (ac2946e8eea6)
+* convert nightly to all (5cf1d9fa2d85)
+* upgrade requirements.txt (9c3f45999cc9)
+* do not run in privileged mode (73efc2f0f0d9)
+* use opengl (ef638e5b2401)
+* upgrade requirements.txt (4182fa48461a)
+
 ## v0.2.0 (2022-09-27)
 
 ### Feature
