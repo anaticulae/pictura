@@ -42,10 +42,10 @@ BADEN WUERTEMBERG
 
 
 @pytest.mark.xfail(reason='software integration')
-@utilatest.requires(power.HOME040_PDF)
+@utilatest.requires(power.HOME043_PDF)
 def test_text_frompath():
     sources = os.path.join(
-        power.link(power.HOME040_PDF),
+        power.link(power.HOME043_PDF),
         'rawmaker__images_images',
     )
     images = utila.file_list(sources, exclude='yaml', absolute=True)

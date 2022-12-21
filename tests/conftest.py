@@ -21,7 +21,7 @@ power.setup(picture.ROOT)
 
 RESOURCES = [
     power.MASTER063_PDF,
-    power.HOME040_PDF,
+    power.HOME043_PDF,
 ]
 
 
