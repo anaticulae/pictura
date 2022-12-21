@@ -17,7 +17,6 @@ import utilatest
 import picture
 
 
-@pytest.mark.xfail(reason='software integration')
 @utilatest.requires(power.MASTER063_PDF)
 def test_image_content():
     sources = os.path.join(
