@@ -19,7 +19,7 @@ FILES = 'simple'.split()
 class Lookup:
 
     def __init__(self):
-        self.data = dict()
+        self.data = {}
 
     def __call__(self, hashvalue):
         self.load_data()
