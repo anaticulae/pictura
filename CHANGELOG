@@ -1,6 +1,196 @@
 # CHANGELOG
 
 
+## v1.0.1 (2026-07-12)
+
+### Chores
+
+- **make**: Adjust make file
+  ([`a778b0c`](https://github.com/anaticulae/pictura/commit/a778b0c7296902ac478fe2b656cb6dfabd913d77))
+
+
 ## v1.0.0 (2026-07-12)
+
+### Bug Fixes
+
+- **trainer**: Skip missing documents
+  ([`31f13a9`](https://github.com/anaticulae/pictura/commit/31f13a97d8e1c964ca9bb0009b7158312d38d75b))
+
+### Chores
+
+- **github**: Add .github
+  ([`a1c0693`](https://github.com/anaticulae/pictura/commit/a1c069331427fa5bf9784f071b1a0167cd6dbe15))
+
+- **Jenkins**: Upgrade pipeline
+  ([`779611f`](https://github.com/anaticulae/pictura/commit/779611f10d34e5d66d74f3b1e471ceeddc8ba9d3))
+
+- **pictura**: Use dynamic version
+  ([`b21481a`](https://github.com/anaticulae/pictura/commit/b21481a6154c34d07ba3a36d1e71acf85232eef5))
+
+- **project**: Adjust name
+  ([`a4a0fbf`](https://github.com/anaticulae/pictura/commit/a4a0fbf4e644395ccca91563815402f69dd54139))
+
+- **pyproject**: Add modern layout
+  ([`7188f30`](https://github.com/anaticulae/pictura/commit/7188f303d688f3960187686b6c55bb062a65ad01))
+
+- **requirements**: Upgrade requirements.txt
+  ([`6ac88d2`](https://github.com/anaticulae/pictura/commit/6ac88d235667001035dc75e74f74b10c0ea48ffd))
+
+### Documentation
+
+- **readme**: Adjust path
+  ([`9f6b148`](https://github.com/anaticulae/pictura/commit/9f6b148bdefe03037354469965e983cc05d873ad))
+
+### Refactoring
+
+- **replace**: Automated replacement
+  ([`0fd08e2`](https://github.com/anaticulae/pictura/commit/0fd08e203cfaafa61302e20dbbc4065843637483))
+
+### Testing
+
+- **conftest**: Adjust parameter
+  ([`7bf84ba`](https://github.com/anaticulae/pictura/commit/7bf84ba202e2309a9e4c8a73589a74f58354f059))
+
+- **enable**: Enable xpassed test
+  ([`520ad12`](https://github.com/anaticulae/pictura/commit/520ad12a2b87902fe6fde56a201ed0586cc528cb))
+
+
+## v0.2.1 (2022-10-10)
+
+### Chores
+
+- **Jenkins**: Add separate generate step
+  ([`d59882b`](https://github.com/anaticulae/pictura/commit/d59882b1350e79f71b9782beb64d8d5aca5034ae))
+
+- **Jenkins**: Convert nightly to all
+  ([`5cf1d9f`](https://github.com/anaticulae/pictura/commit/5cf1d9fa2d85359aa55c43fe1a74a24a5aad5c79))
+
+- **Jenkins**: Do not run in privileged mode
+  ([`73efc2f`](https://github.com/anaticulae/pictura/commit/73efc2f0f0d9c6a8d559001fe38745b2bab3db6f))
+
+- **Jenkins**: Upgrade baw
+  ([`ac2946e`](https://github.com/anaticulae/pictura/commit/ac2946e8eea6fe8de87a7539ad0c7194a57a987a))
+
+- **Jenkinsfile**: Use opengl
+  ([`ef638e5`](https://github.com/anaticulae/pictura/commit/ef638e5b2401e8991dfb323e60d4f4be2eb9a72e))
+
+- **requirements**: Upgrade requirements.txt
+  ([`9c3f459`](https://github.com/anaticulae/pictura/commit/9c3f45999cc9b9d2100af067c9a09f08a5e6979c))
+
+- **requirements**: Upgrade requirements.txt
+  ([`4182fa4`](https://github.com/anaticulae/pictura/commit/4182fa48461afff0ba93e47eecf1cf9d7c51cc00))
+
+### Testing
+
+- **detector**: Adjust test after software integration
+  ([`f180cc5`](https://github.com/anaticulae/pictura/commit/f180cc5356ef3469f8c2305dd65983590bfcbac5))
+
+
+## v0.2.0 (2022-09-27)
+
+### Bug Fixes
+
+- **trainer**: Do not run on import time
+  ([`8ebb40b`](https://github.com/anaticulae/pictura/commit/8ebb40b42393e654e3413bc0cf009fbe1ae054c2))
+
+### Chores
+
+- **ci**: Add Jenkinsfile
+  ([`a6b390f`](https://github.com/anaticulae/pictura/commit/a6b390fbe8252c964a7cdf85a1fc08ad9f089811))
+
+- **requirements**: Add utilatest
+  ([`84deea0`](https://github.com/anaticulae/pictura/commit/84deea006e618c9210c17a8bd9c7e1bce8513174))
+
+- **requirements**: Upgrade requirements.txt
+  ([`5081de1`](https://github.com/anaticulae/pictura/commit/5081de19864bcd12477e1c94567ebe2e4a3856cd))
+
+- **requirements**: Upgrade requirements.txt
+  ([`70f0097`](https://github.com/anaticulae/pictura/commit/70f0097193f6c01d4c4a8b86fee353b971f8ef0f))
+
+- **resources**: Extend test data generator
+  ([`1ae0e89`](https://github.com/anaticulae/pictura/commit/1ae0e899d9e591e6ada1b0f45c0d5c3f5a521c1f))
+
+### Code Style
+
+- **changelog**: Adjust to release tool
+  ([`61710c1`](https://github.com/anaticulae/pictura/commit/61710c1f904cf6377ed94009367e01fd7c10fc05))
+
+- **copyright**: Add missing copyright header
+  ([`fb29d03`](https://github.com/anaticulae/pictura/commit/fb29d03ebd35d23dca8bd2aebf4b9b1428b0f260))
+
+- **docs**: Adjust headline
+  ([`5ab1684`](https://github.com/anaticulae/pictura/commit/5ab16847f8fa666708e1d37ce3349fa28f53caaa))
+
+- **imports**: Organize imports
+  ([`8c307aa`](https://github.com/anaticulae/pictura/commit/8c307aa55113ea422e6870b54ea29e67d1c3dc9d))
+
+### Features
+
+- **detector**: Add method to detect text from path
+  ([`52ed1d4`](https://github.com/anaticulae/pictura/commit/52ed1d41b8098547500151049bbd1487f9f5b449))
+
+### Testing
+
+- **adjust**: Clarify interface
+  ([`b38c252`](https://github.com/anaticulae/pictura/commit/b38c252e368faf13156ac1b1510781be9b173213))
+
+- **detector**: Skip tests if resource is not generated
+  ([`4432c58`](https://github.com/anaticulae/pictura/commit/4432c581056113292a1320f5749613405ff12c01))
+
+
+## v0.1.0 (2022-01-10)
+
+### Chores
+
+- **requirements**: Add power, genex
+  ([`43ea840`](https://github.com/anaticulae/pictura/commit/43ea840f98841937dd700580591866d6ede2ccb1))
+
+- **requirements**: Add utila and Pillow
+  ([`52161c1`](https://github.com/anaticulae/pictura/commit/52161c1c7522e9774c9e71cfd62812c02ae0965c))
+
+### Features
+
+- **data**: Add type to represent logo with text
+  ([`58ba5e4`](https://github.com/anaticulae/pictura/commit/58ba5e4a14d32e030b0e7d263324f37640fdc4fa))
+
+- **detector**: Add image content detector interface
+  ([`5aedb79`](https://github.com/anaticulae/pictura/commit/5aedb793d9ae71638d4d25a5dee333196c1f4730))
+
+- **detector**: Use trained data to "detect" image content
+  ([`b5235d2`](https://github.com/anaticulae/pictura/commit/b5235d274bc202d1670aebb48236e4cb8534102a))
+
+- **hash**: Add method to hash image
+  ([`e35236c`](https://github.com/anaticulae/pictura/commit/e35236c7d5490cf6d177468d31550883a44af87b))
+
+- **hasher**: Add method to load image
+  ([`229d1c5`](https://github.com/anaticulae/pictura/commit/229d1c578c7810f0b039e58a7f33b2151f066cdb))
+
+- **image**: Add method to normalize image
+  ([`9b406e4`](https://github.com/anaticulae/pictura/commit/9b406e4eb37c1f706a8923bb68d2092a1440c617))
+
+- **simple**: Train simple data by hand
+  ([`901476c`](https://github.com/anaticulae/pictura/commit/901476c4b91da7136010c97ff27ec4e9797ce5e2))
+
+- **train**: Add package with trained data
+  ([`b947a47`](https://github.com/anaticulae/pictura/commit/b947a4782fb01c4517f373610eeb8f4634e20c9b))
+
+- **trainer**: Add trainer to ease pdf image classification
+  ([`e5ea251`](https://github.com/anaticulae/pictura/commit/e5ea2516d60bf2f29787cce208b4a3b73b7eabc1))
+
+### Refactoring
+
+- **rename**: Improve package name
+  ([`3eec15b`](https://github.com/anaticulae/pictura/commit/3eec15b52603490938a362341690586f2a7a4293))
+
+### Testing
+
+- **detect**: Add method to verify detector behavior/interface
+  ([`325fd81`](https://github.com/anaticulae/pictura/commit/325fd813cf714d8914af393b9e2035c58b91efe3))
+
+- **generate**: Generate example images
+  ([`b32b199`](https://github.com/anaticulae/pictura/commit/b32b199598a62675ba393439bae8e382f1cc4000))
+
+
+## v0.0.0 (2022-01-10)
 
 - Initial Release
