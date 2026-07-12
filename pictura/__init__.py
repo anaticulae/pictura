@@ -7,6 +7,7 @@
 # be prosecuted under federal law. Its content is company confidential.
 #==============================================================================
 
+import importlib.metadata
 import os
 
 from pictura.data import LOGO_TEXT
@@ -17,7 +18,7 @@ from pictura.detector import text_frompath
 from pictura.hasher import imagehash
 from pictura.hasher import imageload
 
-__version__ = '0.2.1'
+PROCESS = 'pictura'
+__version__ = importlib.metadata.version(PROCESS)
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-PROCESS = 'pictura'
