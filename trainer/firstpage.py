@@ -47,5 +47,7 @@ def imageinfo(path: str):
 
 if __name__ == "__main__":
     for filepath in hoverpower.PDF:
+        if not utilo.exists(filepath):
+            continue
         extacted = extractpdf(filepath)
         imageinfo(extacted)
