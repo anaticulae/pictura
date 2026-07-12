@@ -36,6 +36,6 @@ def extract(resources):
         dest=hoverpower.generated(),
         rawmaker='--images',
         oneline=None,
-        pdfinfo=False,
+        pdflog=False,
         pages='0',
     )
