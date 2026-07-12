@@ -9,25 +9,25 @@
 
 import os
 
-import power
+import hoverpower
 import pytest
-import utila
-import utilatest
+import utilo
+import utilotest
 
-import picture
+import pictura
 
 
-@utilatest.requires(power.MASTER063_PDF)
+@utilotest.requires(hoverpower.MASTER063_PDF)
 def test_image_content():
     sources = os.path.join(
-        power.link(power.MASTER063_PDF),
+        hoverpower.link(hoverpower.MASTER063_PDF),
         'rawmaker__images_images',
     )
-    images = utila.file_list(sources, exclude='yaml', absolute=True)
+    images = utilo.file_list(sources, exclude='yaml', absolute=True)
     first = images[0]
-    loaded = picture.imageload(first)
-    detected = picture.detect(loaded)
-    assert detected.detected == picture.LOGO_TEXT
+    loaded = pictura.imageload(first)
+    detected = pictura.detect(loaded)
+    assert detected.detected == pictura.LOGO_TEXT
     # TODO: ENABLE LATER
     expected = 'IN DEI NOMINE FELICITER\nRADBOUD UNIVERSITEIT NIJMEGEN'
     assert detected.text == expected
@@ -41,13 +41,13 @@ BADEN WUERTEMBERG
 
 
 @pytest.mark.xfail(reason='software integration')
-@utilatest.requires(power.HOME043_PDF)
+@utilotest.requires(hoverpower.HOME043_PDF)
 def test_text_frompath():
     sources = os.path.join(
-        power.link(power.HOME043_PDF),
+        hoverpower.link(hoverpower.HOME043_PDF),
         'rawmaker__images_images',
     )
-    images = utila.file_list(sources, exclude='yaml', absolute=True)
+    images = utilo.file_list(sources, exclude='yaml', absolute=True)
     first = images[0]
-    text = picture.text_frompath(first)
+    text = pictura.text_frompath(first)
     assert text == EXPECTED

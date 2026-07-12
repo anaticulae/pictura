@@ -8,8 +8,8 @@
 # =============================================================================
 
 [project]
-short = picture
+short = pictura
 name = get the content
 
-source = picture
-    picture_trained
+source = pictura
+    pictura_trained

@@ -10,21 +10,21 @@
 
 import os
 
-import power
-import utila
+import hoverpower
+import utilo
 
-import picture
+import pictura
 
-ROOT = utila.tmpdir(picture.ROOT)
+ROOT = utilo.tmpdir(pictura.ROOT)
 
 
 def extractpdf(pdf):
-    filename = utila.simple(os.path.split(pdf)[1])
+    filename = utilo.simple(os.path.split(pdf)[1])
     path = os.path.join(ROOT, filename)
     os.makedirs(path)
     cmd = f'rawmaker -i {pdf} -o {path} --images --pages=0,1,2'
-    utila.debug(cmd)
-    utila.run(cmd)
+    utilo.debug(cmd)
+    utilo.run(cmd)
     return path
 
 
@@ -32,20 +32,20 @@ def imageinfo(path: str):
     document = os.path.split(path)[1]
     sources = os.path.join(path, 'rawmaker__images_images')
     if not os.path.exists(sources):
-        utila.debug(f'path does not exists: {sources}')
+        utilo.debug(f'path does not exists: {sources}')
         return
-    images = utila.file_list(sources, exclude='yaml', absolute=True)
+    images = utilo.file_list(sources, exclude='yaml', absolute=True)
     for image in images:
-        loaded = picture.imageload(image)
-        hashed = picture.imagehash(loaded)
-        utila.log(',', end='')
-        utila.log(hashed, end=',')
-        utila.log('', end=',')
-        utila.log(document, end=' ')
-        utila.log(image)
+        loaded = pictura.imageload(image)
+        hashed = pictura.imagehash(loaded)
+        utilo.log(',', end='')
+        utilo.log(hashed, end=',')
+        utilo.log('', end=',')
+        utilo.log(document, end=' ')
+        utilo.log(image)
 
 
 if __name__ == "__main__":
-    for filepath in power.PDF:
+    for filepath in hoverpower.PDF:
         extacted = extractpdf(filepath)
         imageinfo(extacted)

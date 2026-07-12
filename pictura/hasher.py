@@ -8,7 +8,7 @@
 # =============================================================================
 
 import PIL.Image
-import utila
+import utilo
 
 
 def imagehash(image: PIL.Image.Image) -> int:
@@ -17,7 +17,7 @@ def imagehash(image: PIL.Image.Image) -> int:
     """
     image = image_normalize(image)
     png = image._repr_png_()  # pylint:disable=W0212
-    result = utila.binhash(png)
+    result = utilo.binhash(png)
     return result
 
 

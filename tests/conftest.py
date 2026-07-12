@@ -7,33 +7,33 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import genex
-import power
+import gennex
+import hoverpower
 import pytest
 
-import picture
+import pictura
 
 pytest_plugins = ['pytester', 'xdist']  # pylint: disable=invalid-name
 
-PACKAGE = picture.PROCESS
+PACKAGE = pictura.PROCESS
 
-power.setup(picture.ROOT)
+hoverpower.setup(pictura.ROOT)
 
 RESOURCES = [
-    power.MASTER063_PDF,
-    power.HOME043_PDF,
+    hoverpower.MASTER063_PDF,
+    hoverpower.HOME043_PDF,
 ]
 
 
 @pytest.mark.usefixtures('session')
 def pytest_sessionstart():
-    power.run()
+    hoverpower.run()
 
 
 def extract(resources):
-    genex.extract(
+    gennex.extract(
         files=resources,
-        dest=power.generated(),
+        dest=hoverpower.generated(),
         rawmaker='--images',
         oneline=None,
         pdfinfo=False,

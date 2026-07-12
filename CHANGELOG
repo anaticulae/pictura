@@ -28,7 +28,7 @@ Every noteable change is logged here.
 
 * add Jenkinsfile (a6b390fbe825)
 * upgrade requirements.txt (5081de19864b)
-* add utilatest (84deea006e61)
+* add utilotest (84deea006e61)
 * upgrade requirements.txt (70f0097193f6)
 * extend test data generator (1ae0e899d9e5)
 

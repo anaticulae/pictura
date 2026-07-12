@@ -9,22 +9,22 @@
 
 import PIL.Image
 
-import picture
-import picture_trained
+import pictura
+import pictura_trained
 
 
-def detect(image: PIL.Image.Image) -> picture.ImageContent:
-    hashed = picture.imagehash(image)
-    detected = picture_trained.LOOKUP(hashed)
+def detect(image: PIL.Image.Image) -> pictura.ImageContent:
+    hashed = pictura.imagehash(image)
+    detected = pictura_trained.LOOKUP(hashed)
     if not detected:
         return None
     textraw = detected[1]
-    result = picture.ImageContent(detected=detected[0], text=textraw)
+    result = pictura.ImageContent(detected=detected[0], text=textraw)
     return result
 
 
 def text_frompath(path: str) -> str:
-    image = picture.imageload(path)
+    image = pictura.imageload(path)
     detected = detect(image)
     if not detected:
         return None

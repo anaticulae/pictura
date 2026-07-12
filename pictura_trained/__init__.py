@@ -9,9 +9,9 @@
 
 import os
 
-import utila
+import utilo
 
-import picture
+import pictura
 
 FILES = 'simple'.split()
 
@@ -26,7 +26,7 @@ class Lookup:
         try:
             return self.data[hashvalue]
         except KeyError:
-            utila.error(f'unknown image: {hashvalue}')
+            utilo.error(f'unknown image: {hashvalue}')
         return None
 
     def load_data(self):
@@ -39,9 +39,9 @@ class Lookup:
         root = os.path.split(__file__)[0]
         path = os.path.join(root, filename)
         if not os.path.exists(path):
-            utila.error(f'missing file: {path}')
+            utilo.error(f'missing file: {path}')
             return
-        loaded = utila.file_read(path)
+        loaded = utilo.file_read(path)
         for line in loaded.splitlines():
             typ, hashed, content, _ = line.split(',', maxsplit=3)
             typ = convert(typ)
@@ -53,11 +53,11 @@ class Lookup:
 
 def convert(typ):
     if 'LT' in typ:
-        return picture.ImageType.LOGO | picture.ImageType.TEXT
+        return pictura.ImageType.LOGO | pictura.ImageType.TEXT
     if 'L' in typ:
-        return picture.ImageType.LOGO
-    utila.error(f'unknown type: {typ}')
-    return picture.ImageType.UNDEFINED
+        return pictura.ImageType.LOGO
+    utilo.error(f'unknown type: {typ}')
+    return pictura.ImageType.UNDEFINED
 
 
 LOOKUP = Lookup()

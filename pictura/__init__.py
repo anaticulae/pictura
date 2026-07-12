@@ -9,15 +9,15 @@
 
 import os
 
-from picture.data import LOGO_TEXT
-from picture.data import ImageContent
-from picture.data import ImageType
-from picture.detector import detect
-from picture.detector import text_frompath
-from picture.hasher import imagehash
-from picture.hasher import imageload
+from pictura.data import LOGO_TEXT
+from pictura.data import ImageContent
+from pictura.data import ImageType
+from pictura.detector import detect
+from pictura.detector import text_frompath
+from pictura.hasher import imagehash
+from pictura.hasher import imageload
 
 __version__ = '0.2.1'
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-PROCESS = 'picture'
+PROCESS = 'pictura'
